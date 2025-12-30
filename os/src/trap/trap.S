@@ -48,7 +48,7 @@ __restore:
     ld t2, 2*8(sp)
     csrw sstatus, t0
     csrw sepc, t1
-    csrw sscratch, t2
+    csrw sscratch, t2 // 用户栈地址恢复回去
     # restore general-purpuse registers except sp/tp
     ld x1, 1*8(sp)
     ld x3, 3*8(sp)
